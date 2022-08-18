@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/designFirstHomeFragment"
+        android:name="com.designs.mybeautifuldesigns.designs.fragments.design_1.DesignFirstHomeFragment"
+        android:label="DesignFirstHomeFragment"
+        tools:layout="@layout/design_first_screen_home" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.designs.mybeautifuldesigns.designs.fragments.HomeScreen"
+        android:label="HomeScreen"
+        tools:layout="@layout/screen_home">
+        <action
+            android:id="@+id/action_homeScreen_to_designFirstHomeFragment"
+            app:destination="@id/designFirstHomeFragment" />
+    </fragment>
+</navigation>
